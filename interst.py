@@ -7,7 +7,7 @@ class Interest:
      def __init__(self, root):
          self.root = root
          self.root.title("Interest Rate Calculator")
-         self.root.geometry("1350x800+0+0")
+         self.root.geometry("1350x800")
          self.root.configure(background='Gray')
 
          #================================Frame=============================================================
@@ -36,7 +36,32 @@ class Interest:
          var1 = StringVar()
          var2 = StringVar()
 
-         #=====================================================================================================
+         #================================== Entry and Labels ======================================================
+         self.lblTitle = Label(LeftFrame0, text= "Interest Rate Calculator", padx = 17, pady = 10, bd = 1, font = ('arial', 20, 'bold')
+                            , bg = "powder blue", width = 25)
+         self.lblTitle.pack()
+
+         self.lblBalance = Label(LeftFrame2, text="Please Enter the initial balance", font = ('arial', 20, 'bold')
+                                , bd = 2, justify=LEFT)
+         self.lblBalance.grid(row=0, column=0, padx=15)
+
+         self.txtBalance = Entry(LeftFrame2, textvariable = var1, font = ('arial', 20, 'bold'), bd = 5, width = 14, justify=RIGHT)
+         self.txtBalance.grid(row=0, column=1, padx=3, pady=10)
+
+         self.lblYear = Label(LeftFrame2, text="Please Enter the Num. of years", font = ('arial', 20, 'bold')
+                                , bd = 2, justify=LEFT)
+         self.lblYear.grid(row=1, column=0)
+
+         self.txtYear = Entry(LeftFrame2, textvariable = var2, font = ('arial', 20, 'bold'), bd = 5, width=14, justify=RIGHT)
+         self.txtYear.grid(row=1, column=1, padx=3, pady=10)
+
+         
+         self.lblRateTable = Label(RightFrame0, font = ('arial', 20, 'bold'), text = "\t Pay Back").grid(row =0, column = 0)
+         self.txtRateTable = Text(RightFrame0, height = 15, width = 52, bd = 16, font = ('arial', 12, 'bold'))
+         self.txtRateTable.grid(row = 1, column = 0, columnspan = 3)
+         
+
+
          
         
         
