@@ -59,6 +59,19 @@ class Interest:
          self.lblRateTable = Label(RightFrame0, font = ('arial', 20, 'bold'), text = "\t Pay Back").grid(row =0, column = 0)
          self.txtRateTable = Text(RightFrame0, height = 15, width = 52, bd = 16, font = ('arial', 12, 'bold'))
          self.txtRateTable.grid(row = 1, column = 0, columnspan = 3)
+
+         #==================================================Buttons================================================================
+         self.btnRate = Button(LeftFrame1, text = "Interst Rate", padx = 5, pady=2, bd = 4, width = 12, font = ('arial', 20, 'bold')
+                                , height = 1, bg = "powder blue")
+         self.btnRate.grid(row = 3, column =0)
+
+         self.btnRate = Button(LeftFrame1, text = "Reset", padx = 5, pady=2, bd = 4, fg="black", width = 12, font = ('arial', 20, 'bold')
+                                , height = 1, bg = "powder blue")
+         self.btnRate.grid(row = 3, column =1)
+
+         self.btnExit = Button(LeftFrame1, text = "Exit", padx = 5, pady=2, bd = 4, fg="black", width = 12, font = ('arial', 20, 'bold')
+                                , height = 1, bg = "powder blue")
+         self.btnExit.grid(row = 3, column =3)
          
 
 
